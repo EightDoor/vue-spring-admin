@@ -17,7 +17,7 @@ import com.start6.common.utils.StringUtils;
 import com.start6.common.utils.file.FileUploadUtils;
 import com.start6.framework.aspectj.lang.annotation.Log;
 import com.start6.framework.aspectj.lang.enums.BusinessType;
-import com.start6.framework.config.RuoYiConfig;
+import com.start6.framework.config.ZhoukaiConfig;
 import com.start6.framework.security.LoginUser;
 import com.start6.framework.security.service.TokenService;
 import com.start6.framework.web.controller.BaseController;
@@ -123,7 +123,7 @@ public class SysProfileController extends BaseController
         if (!file.isEmpty())
         {
             LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
-            String avatar = FileUploadUtils.upload(RuoYiConfig.getAvatarPath(), file);
+            String avatar = FileUploadUtils.upload(ZhoukaiConfig.getAvatarPath(), file);
             if (userService.updateUserAvatar(loginUser.getUsername(), avatar))
             {
                 AjaxResult ajax = AjaxResult.success();

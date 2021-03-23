@@ -11,7 +11,7 @@ import com.start6.common.exception.file.InvalidExtensionException;
 import com.start6.common.utils.DateUtils;
 import com.start6.common.utils.IdUtils;
 import com.start6.common.utils.StringUtils;
-import com.start6.framework.config.RuoYiConfig;
+import com.start6.framework.config.ZhoukaiConfig;
 
 /**
  * 文件上传工具类
@@ -33,7 +33,7 @@ public class FileUploadUtils
     /**
      * 默认上传的地址
      */
-    private static String defaultBaseDir = RuoYiConfig.getProfile();
+    private static String defaultBaseDir = ZhoukaiConfig.getProfile();
 
     public static void setDefaultBaseDir(String defaultBaseDir)
     {
@@ -144,7 +144,7 @@ public class FileUploadUtils
 
     private static final String getPathFileName(String uploadDir, String fileName) throws IOException
     {
-        int dirLastIndex = RuoYiConfig.getProfile().length() + 1;
+        int dirLastIndex = ZhoukaiConfig.getProfile().length() + 1;
         String currentDir = StringUtils.substring(uploadDir, dirLastIndex);
         String pathFileName = Constants.RESOURCE_PREFIX + "/" + currentDir + "/" + fileName;
         return pathFileName;

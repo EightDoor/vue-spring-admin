@@ -55,7 +55,7 @@ import com.start6.framework.aspectj.lang.annotation.Excel;
 import com.start6.framework.aspectj.lang.annotation.Excel.ColumnType;
 import com.start6.framework.aspectj.lang.annotation.Excel.Type;
 import com.start6.framework.aspectj.lang.annotation.Excels;
-import com.start6.framework.config.RuoYiConfig;
+import com.start6.framework.config.ZhoukaiConfig;
 import com.start6.framework.web.domain.AjaxResult;
 
 /**
@@ -885,7 +885,7 @@ public class ExcelUtil<T>
      */
     public String getAbsoluteFile(String filename)
     {
-        String downloadPath = RuoYiConfig.getDownloadPath() + filename;
+        String downloadPath = ZhoukaiConfig.getDownloadPath() + filename;
         File desc = new File(downloadPath);
         if (!desc.getParentFile().exists())
         {

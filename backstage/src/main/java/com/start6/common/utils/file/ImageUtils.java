@@ -12,7 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.start6.common.constant.Constants;
 import com.start6.common.utils.StringUtils;
-import com.start6.framework.config.RuoYiConfig;
+import com.start6.framework.config.ZhoukaiConfig;
 
 /**
  * 图片处理工具类
@@ -81,7 +81,7 @@ public class ImageUtils
             else
             {
                 // 本机地址
-                String localPath = RuoYiConfig.getProfile();
+                String localPath = ZhoukaiConfig.getProfile();
                 String downloadPath = localPath + StringUtils.substringAfter(url, Constants.RESOURCE_PREFIX);
                 in = new FileInputStream(downloadPath);
             }

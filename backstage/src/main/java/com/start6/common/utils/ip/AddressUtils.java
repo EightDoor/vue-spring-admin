@@ -6,7 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.start6.common.constant.Constants;
 import com.start6.common.utils.StringUtils;
 import com.start6.common.utils.http.HttpUtils;
-import com.start6.framework.config.RuoYiConfig;
+import com.start6.framework.config.ZhoukaiConfig;
 
 /**
  * 获取地址类
@@ -31,7 +31,7 @@ public class AddressUtils
         {
             return "内网IP";
         }
-        if (RuoYiConfig.isAddressEnabled())
+        if (ZhoukaiConfig.isAddressEnabled())
         {
             try
             {
